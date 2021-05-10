@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Sign Up</title>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="header">
+			<h2>Create Account</h2>
+		</div>
+		<form id="form" class="form">
+			<input type="radio" id="User" name="1" value="USER">
+  			<label for="male">USER</label><br>
+  			<input type="radio" id="Admin" name="1" value="ADMIN">
+  			<label for="female">ADMIN</label><br><br>
+			<div class="form-control">
+				<label for="username">Username</label>
+				<input type="text" placeholder="username" id="username" />
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
+			<div class="form-control">
+				<label for="username">Email</label>
+				<input type="email" placeholder="email" id="email" />
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
+			<div class="form-control">
+				<label for="username">Password</label>
+				<input type="password" placeholder="Password" id="password"  onkeyup="return validate()"/>
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message
+					<ul>
+						<li id="special_char">At least one special symbol</li>
+						<li id="number">At least one number</li>
+						<li id="length">At least 6 characters</li>
+						
+					</ul>
+				</small>
+			</div>
+			<div class="form-control">
+				<label for="username">Password check</label>
+				<input type="password"  placeholder="Confirm Password" id="password2" />
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
+			<button>Submit</button>
+		</form>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
